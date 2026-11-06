@@ -20,6 +20,10 @@ mvn test
 mvn exec:java -Dexec.mainClass=br.com.ecommerce.ml.TensorOperations
 ```
 
+O CI também oferece suporte ao comando `ant -noinput -buildfile build.xml`.
+O alvo Ant delega a verificação completa (`mvn verify`) ao Maven para reutilizar
+as dependências e os testes já definidos no projeto.
+
 O backend TensorFlow CPU está configurado no `pom.xml`. A primeira execução
 pode baixar as bibliotecas nativas. O dataset `basicdataset` não é necessário
 para esta etapa, que implementa inferência e não treinamento.
